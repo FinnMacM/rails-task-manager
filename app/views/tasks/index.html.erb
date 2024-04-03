@@ -1,0 +1,16 @@
+<div class="tasks-container">
+  <h1>My Tasks</h1>
+
+  <ul class="tasks-list">
+    <% @tasks.each do |task| %>
+      <li class="task-item">
+        <%= link_to task.title, task_path(task), class: "task-link" %>
+      </li>
+    <% end %>
+  </ul>
+
+  <div class="create-new">
+    <%= link_to "Create new", new_task_path, class: "create-new-button" %>
+  </div>
+</div>
+
